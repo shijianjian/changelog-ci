@@ -329,7 +329,9 @@ class ChangelogCI:
             _print_output('error', msg)
             _print_output('error', url)
             _print_output('error', payload)
-            _print_output('error', response)
+            _print_output('error', self.token)
+            _print_output('error', response.text)
+            _print_output('error', response.reason)
 
     def run(self):
         """Entrypoint to the Changelog CI"""
