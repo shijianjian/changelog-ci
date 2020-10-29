@@ -317,7 +317,7 @@ class ChangelogCI:
             url, headers=self._get_request_headers(),
             json=payload
         )
-
+        
         if response.status_code != 201:
             # API should return 201, otherwise show error message
             msg = (
@@ -327,6 +327,9 @@ class ChangelogCI:
             )
 
             _print_output('error', msg)
+            _print_output('error', 'URL', url)
+            _print_output('error', "payload", payload)
+            _print_output('error', "response", response)
 
     def run(self):
         """Entrypoint to the Changelog CI"""
