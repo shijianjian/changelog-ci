@@ -379,7 +379,7 @@ class ChangelogCI:
             return
 
         string_data = self._parse_data(version, pull_request_data)
-        _print_output('info', msg)
+        _print_output('info', string_data)
 
         if self.config['commit_changelog']:
             subprocess.run(['echo', '::group::Commit Changelog'])
