@@ -553,12 +553,12 @@ if __name__ == '__main__':
     email = os.environ['INPUT_COMMITTER_EMAIL']
 
     # Group: Checkout git repository
-    subprocess.run(['echo', '::group::Checkout git repository'])
+#     subprocess.run(['echo', '::group::Checkout git repository'])
 
-    subprocess.run(['git', 'fetch', '--prune', '--unshallow', 'origin',  head_ref])
-    subprocess.run(['git', 'checkout',  head_ref])
+#     subprocess.run(['git', 'fetch', '--prune', '--unshallow', 'origin',  head_ref])
+#     subprocess.run(['git', 'checkout',  head_ref])
 
-    subprocess.run(['echo', '::endgroup::'])
+#     subprocess.run(['echo', '::endgroup::'])
 
     # Group: Configure Git
     subprocess.run(['echo', '::group::Configure Git'])
